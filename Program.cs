@@ -9,14 +9,39 @@ string[] arrayFirst = new string[NumberElementsArray];
 for (int i =0; i < NumberElementsArray; i++)
 {
     Console.WriteLine($"Введите {i+1} элемент");
-    string NumberElements = Convert.ToString(Console.ReadLine());
+    string NumberElements = Convert.ToString(Console.ReadLine())!;
     arrayFirst[i] = NumberElements;
+    //Console.Write($" {arrayFirst[i]} {";" }");
 }
- 
 
-for (int i =0; i < NumberElementsArray; i++)
+
+int MinFinalArray = 1;
+int MaxFinalArray = 3;
+
+ int LongFinalArray = new Random().Next(MinFinalArray,MaxFinalArray);;
+    
+string[] FinalArray = new string[LongFinalArray];
+Console.Write("-" + LongFinalArray + "-");
+
+
+    for (int j = 0; j < LongFinalArray; j++)
+   {
+        int k = new Random().Next(0,NumberElementsArray);
+         FinalArray[j] =  arrayFirst[k];
+    }
+
+
+void PrintArray(string[] array)
 {
-
-    Console.WriteLine();
-    Console.WriteLine(arrayFirst[i]);
+ Console.Write("[");
+for (int i = 0; i < array.Length; i++)
+{
+  Console.Write($" {array[i]} {";"} ");
 }
+Console.Write("]");
+}
+    
+
+PrintArray(arrayFirst);
+Console.Write("->");
+PrintArray(FinalArray);
