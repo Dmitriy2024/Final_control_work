@@ -49,7 +49,4 @@ int MinLong  = 3;
     }
     
 
-  PrintArray(ArrayFirst);
-  Console.Write("->");
-  PrintArray(FinalArray);
-
+  
